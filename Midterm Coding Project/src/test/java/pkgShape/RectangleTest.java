@@ -81,6 +81,7 @@ public class RectangleTest {
 		try {
 			try {
 				Rectangle rec1= new Rectangle(-2,3);
+				Rectangle rec2= new Rectangle(2,-3);
 			}
 			catch(IllegalArgumentException e) {
 				thrown=true;
