@@ -22,6 +22,9 @@ public class Rectangle extends Shape {
 	public Rectangle(int length, int width) {
 		this.Length=length;
 		this.Width=width;
+		if (Length<=0||Width<=0) {
+			throw new IllegalArgumentException();
+		}
 	}
 	
 	@Override
