@@ -36,6 +36,7 @@ public class Cuboid extends Rectangle {
 		throw new UnsupportedOperationException();
 	
 	}
+	
 	class SortByArea implements Comparator<Cuboid>{
 		public int compare(Cuboid A,Cuboid B) {
 			return (int)(A.area()-B.area());
