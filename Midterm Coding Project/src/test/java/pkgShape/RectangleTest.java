@@ -27,10 +27,11 @@ public class RectangleTest {
 			int widthRec1= rec1.getWidth();
 		}
 		catch(Exception e) {
-		fail("failure to get dimension");
+			fail("failure to get dimension");
+		}
 	}
 	@Test 
-	public int setterTest() {
+	public void setterTest() {
 		try {
 			Rectangle rec1= new Rectangle(2,3);
 			int lengthRec1= rec1.getLength();
@@ -70,15 +71,24 @@ public class RectangleTest {
 		try {
 			
 		}
-		fail("Not yet implemented");
+		catch(Exception e) {
+			fail("Not yet implemented");
+		}
 	}
 	@Test
 	public void illegalargumenttest() {
+		boolean thrown=false;
 		try {
-			Rectangle rec1= new Rectangle(2,3);
-			
+			try {
+				Rectangle rec1= new Rectangle(-2,3);
+			}
+			catch(IllegalArgumentException e) {
+				thrown=true;
+				}
+		assertTrue(thrown);
 		}
-		fail("Not yet implemented");
+		catch(Exception e) {
+		fail("Failure to throw Illegal Argument Exception");
+		}
 	}
-
 }
